@@ -19,7 +19,7 @@ class AlbumsTableViewCell: UITableViewCell {
     
     private let albumNameLabel: UILabel = {
        let label = UILabel()
-        label.text = "Name album name"
+        label.text = "Name of Album"
         label.font = UIFont.systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
