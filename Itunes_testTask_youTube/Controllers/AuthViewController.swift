@@ -75,6 +75,10 @@ class AuthViewController: UIViewController {
         setupViews()
         setupDelegate()
         setConstraints()
+        registerKeyboardNotification()
+    }
+    deinit{
+        removeKeyboardNotification()
     }
 
     private func setupViews() {
@@ -123,6 +127,31 @@ extension AuthViewController: UITextFieldDelegate {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         return true
+    }
+}
+
+//MARK: - Keyboard Show - Hide
+
+extension AuthViewController {
+    private func registerKeyboardNotification(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeKeyboardNotification(){
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func keyboardWillShow(notification: Notification){
+        let userInfo = notification.userInfo
+        let keyboardHeight = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        scrollView.contentOffset = CGPoint(x: 0, y: keyboardHeight.height / 4)
+        
+    }
+    @objc private func keyboardWillHide(notification: Notification){
+        scrollView.contentOffset = CGPoint.zero
     }
 }
 
