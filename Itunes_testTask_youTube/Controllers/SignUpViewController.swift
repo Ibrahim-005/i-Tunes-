@@ -190,7 +190,30 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func signUpButtonTapped() {
-        print("SignUpTap")
+       
+        let firstNameText = firstNameTextField.text ?? ""
+        let secondNameText = secondNameTextField.text ?? ""
+        let emailText = emailTextField.text ?? ""
+        let passwordText = passwordTextField.text ?? ""
+        let phoneText = phoneNumberTextField.text ?? ""
+        
+        if firstNameText.isValid(validType: nameValidType) &&
+            secondNameText.isValid(validType: nameValidType) &&
+            emailText.isValid(validType: emailValidType) &&
+            passwordText.isValid(validType: passwordValidType) &&
+            phoneText.count == 19 &&
+            ageIsValid() == true {
+            
+            DataBase.shared.savaUser(firstName: firstNameText, secondName: secondNameText, phone: phoneText, email: emailText, password: passwordText, age: datePicker.date)
+            
+            loginLabel.text = "Registration completed"
+            loginLabel.textColor = .green
+        } else{
+            loginLabel.text = "Registration Failed"
+            loginLabel.textColor = .red
+            alertError(title: "Failed Singing up", message: "Fill correctly all the needed fields. #name, age, password , phone ")
+        }
+        
     }
 
 
