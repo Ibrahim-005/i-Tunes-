@@ -13,10 +13,11 @@ __Sign In :__
 
 __Sign Up , Check all Parameters are Valid :__
 
-![Simulator Screen Shot - iPhone 12 - 2022-08-29 at 18 28 27_187x405](https://user-images.githubusercontent.com/112332266/187228888-87820f25-36a7-4a3c-b313-e2e582bb6360.png)___![Simulator Screen Shot - iPhone 12 - 2022-08-29 at 17 59 38_187x405](https://user-images.githubusercontent.com/112332266/187229042-b745e26f-9e5a-4467-8c55-55024329adc2.png)___![Simulator Screen Shot - iPhone 12 - 2022-08-29 at 18 00 03_187x405](https://user-images.githubusercontent.com/112332266/187229061-2788ba03-1e5c-4b6e-b9ac-539c41cc91ef.png)
+![Simulator Screen Shot - iPhone 12 - 2022-08-29 at 18 28 27_187x405](https://user-images.githubusercontent.com/112332266/187228888-87820f25-36a7-4a3c-b313-e2e582bb6360.png) ___ ![Simulator Screen Shot - iPhone 12 - 2022-08-29 at 17 59 38_187x405](https://user-images.githubusercontent.com/112332266/187229042-b745e26f-9e5a-4467-8c55-55024329adc2.png) ___ ![Simulator Screen Shot - iPhone 12 - 2022-08-29 at 18 00 03_187x405](https://user-images.githubusercontent.com/112332266/187229061-2788ba03-1e5c-4b6e-b9ac-539c41cc91ef.png)
 
 
 __User Profile :__
+
 ![Simulator Screen Shot - iPhone 12 - 2022-08-29 at 18 32 15_187x405](https://user-images.githubusercontent.com/112332266/187229242-24e02c9d-7ad5-4249-bd70-385b6e10ff06.png)
 
 
